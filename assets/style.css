@@ -217,14 +217,10 @@ input[type=submit] {
 /* Hover */
 #logo:hover,
 input[type=submit]:hover {
-  background: #5e7f7e;
+  background: #0916c9;
 }
 
 nav a:hover {
-  color: #5e7f7e;
+  color: #d3d011;
 }
 
-.social:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
