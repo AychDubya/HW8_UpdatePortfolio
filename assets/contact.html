@@ -4,62 +4,64 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contacts Page</title>
-
-  <!-- Bootstrap CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Hannibal</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-  <!-- Start Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <span class="navbar-brand mb-1 h1">Navigate</span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html">Portfolio</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- End Nav -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="page-header">
-          <h1>Hannibal Contact Info</h1>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="HW.png" alt="Hannibal's Pic" class="img-thumbnail">
-          </div>
-          <div class="col-md-9">
-            <p>
-                <title>Activity 1: Basic HTML Bio</title>
-            </head>
-            
-            <body>
-           
-                  <!-- Unordered list -->
+
+    <header>
+  
+        <div class="wrapper">
+              <a href="#" id="logo">Hannibal Wyman</a>
+      
+              <nav>
                   <ul>
-                    <li><strong>Email:</strong> <a href="#">hannibalwy@gmail.com</a></li>
-                    <li><strong>Github:</strong> <a href="#">AychDubya</a></li>
-                    </ul>
-            
-                </section>
-              </div>
-            
-            </body>
-            
-            </html>
-            
+                    <li><a href="index.html"></a>About</a></li>
+                    <li><a href="portfolio.html"></a>Portfolio</a></li>
+                    <li><a href="contact.html"></a>Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+
+<div id="container" class="wrapper">
+  <div id="content" class="module">
+    <h1>Contact</h1>
+  
+    <form id="contact-form">
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name Here..." required="required">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required="required"></textarea>
+          </li>
+        </ul>
+        <input type="submit">
+      </form>
+
+  </div>
+
+  <div id="social" class="module">
+    <h2>Find Me</h2>
+  
+    <a href="https://github.com/AychDubya"><img src="assets/images/git.png"></a>
+    <a href="https://www.linkedin.com/in/hannibal-wyman-17068926"><img src="assets/images/linkedin.jpg"></a>
+    <a href="https://stackoverflow.com/users/13657637/aychdubya?tab=profile"><img src="assets/images/stackoverflow.png"></a>
+  </div>
+</div>
+  <footer> &copy; 2020 Hannibal Wyman</footer>
+    
+</body>
+
+</html>
