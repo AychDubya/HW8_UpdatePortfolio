@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Unit 16 Project 2 Homework: Professional Materials
+=======
+# Unit 08 Updated Portfolio Page
+>>>>>>> db4fbfc2a67facd04ce66f46d05a53fd6b4e6330
 
 Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer competitive.
 
