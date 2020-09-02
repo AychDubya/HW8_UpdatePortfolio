@@ -1,0 +1,94 @@
+var jumbotron = document.querySelector(".jumbotron")
+var container = document.querySelector(".container")
+var startBtn = document.querySelector(".startBtn")
+var questionH1 = document.querySelector(".question")
+var ansDiv = document.querySelector(".answers")
+var timeHere = document.querySelector(".timerHere")
+var initilasDiv = document.querySelector(".initialsDiv")
+var initialsBtn = document.querySelector(".initilasBtn")
+var myIndex = 0
+var secs = 30
+
+var questionsArray = [
+    {
+        question: "Who is right?",
+        answers: ["Me", "you", "both"],
+        correctAnswer: "both"
+    },
+    {
+        question: "Who is wrong?",
+        answers: ["Me", "you", "both"],
+        correctAnswer: "Me"
+    },
+    {
+        question: "WHat color??",
+        answers: ["red", "blue", "green", "grey"],
+        correctAnswer: "red"
+    }
+]
+
+
+
+
+container.style.display = "none"
+initilasDiv.style.display = "none"
+
+startBtn.addEventListener("click", function () {
+    jumbotron.style.display = "none"
+    container.style.display = "block"
+    
+    printQuestions()
+    $(document).ready(function(){
+         var id = setInterval(function(){ 
+            secs--; console.log(secs);
+            timeHere.textContent = secs
+          if(secs<= 0 ){
+            clearInterval(id);
+            ansDiv.style.display="none"
+            alert('Total Time: ' + secs + ' seconds');
+           }else if (myIndex > questionsArray.length -2){
+            clearInterval(id);
+            ansDiv.style.display="none"
+            alert('Total Time: ' + secs + ' seconds');
+           }
+        }, 1000);
+        });
+
+})
+
+
+function printQuestions() {
+    questionH1.textContent = questionsArray[myIndex].question
+
+    for (var i = 0; i < questionsArray[myIndex].answers.length; i++) {
+
+        var option1 = document.createElement("button")
+        option1.setAttribute("class", "col-12 btn btn-primary")
+        option1.textContent = questionsArray[myIndex].answers[i]
+        ansDiv.appendChild(option1)
+    }
+
+}
+
+
+ansDiv.addEventListener("click",function(event){
+    console.log(event.target.textContent);
+    var answerClicked = event.target.textContent
+    if(answerClicked === questionsArray[myIndex].correctAnswer){
+        console.log("correct");
+        
+    }else{
+        console.log("incorrect");
+        
+    }
+    ansDiv.textContent=""
+
+    if(myIndex < questionsArray.length -1 ){
+
+        myIndex++
+        printQuestions()
+    }else{
+        ansDiv.style.display="none"
+    }
+    
+})
